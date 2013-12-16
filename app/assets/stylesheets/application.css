@@ -1,0 +1,412 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Quattrocento', serif;
+	background:  -webkit-linear-gradient(#FFF500, rgba(255,255,255,0) 100%), url('/assets/bg.jpg') no-repeat;
+	background:  -moz-linear-gradient(#FFF500, rgba(255,255,255,0) 100%), url('/assets/bg.jpg') no-repeat;
+	background:  -o-linear-gradient(#FFF500, rgba(255,255,255,0) 100%), url('/assets/bg.jpg') no-repeat;
+	background:  linear-gradient(#FFF500, rgba(255,255,255,0) 100%), url('/assets/bg.jpg') no-repeat;
+	background-size: cover;
+}
+
+.container {
+	background-color: #FFF;
+	border: #3F046F solid 3px;
+	background-image: url('/assets/geometry.png');
+	background-repeat: repeat;
+}
+
+.heading {
+	background-color: rgba(146, 64, 213, .75);
+	border-bottom: #3F046F solid 3px;
+}
+
+h1 {
+	color: #3F046F;
+	text-align: left;
+	font-size: 3em;
+}
+
+.heading img{
+	position: relative;	
+	margin: 5px;
+	border: #3F046F solid 5px;
+}
+
+.heading h1 {
+	float: right;
+	margin: 5px;
+}
+
+.links {
+	clear:both;	
+	background-color: rgba(224, 56, 173, .75);
+	height: 51px;
+	margin: 5px 0;
+	font-size: .75em;
+}
+
+.links ul {
+	list-style: none;
+	margin: 0;
+}
+
+.links li a{
+	float: left;
+	margin-right: 2%;
+	color: #912470;
+	padding: 1em;
+	border: 1px solid #FFF;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+	width: 12%;
+	text-align: center;
+	margin-top: 4px;
+}
+
+.links a:before {
+	content: "\f0c8";
+	font-family: FontAwesome;
+}
+
+.links li:hover a{
+	background-color: #912470;
+	color: #E038AD;
+	text-decoration: underline;
+}
+
+/* a:link {
+	color: #C10087;
+} Doesn't work yet */
+
+a:link:hover {
+	background-color: #A69F00;
+	text-decoration: none;
+}
+
+/* a:visited {
+	color: #9240D5;
+} doesn't work yet*/
+
+h2 {
+	clear:both;
+	border-top: #9240D5 solid 3px;
+	color: #180773;
+	font-size: 2em;
+	text-align: left;
+	padding-top: .5em;
+}
+
+h3 {
+	color: #180773;
+	font-size: 1.1em;
+	text-align: left;
+	padding-top: 5px;
+}
+
+p {
+	padding: 5px;
+	margin: auto;
+	letter-spacing: 1.5;
+}
+
+#video {
+	margin: 5% 20%;
+	border: #9240D5 solid 3px;
+	padding: 5px;
+	width: 560px; 
+	height: 315px;
+}
+
+
+.copyright {
+	clear:both;
+	text-align: center;
+	background-color: rgba(224, 56, 173, .75);
+	color: #912470;
+	border-top: #9240D5 solid 3px;
+	border-bottom: #9240D5 solid 3px;
+	padding: 5px;
+}
+
+
+/*css for specific html pages*/
+
+
+.first::first-letter {
+	float: left;
+	margin-right: 10px;
+	padding: 5px 10px;
+	background: #FFFA73;
+	font-size: 1.5em;
+	line-height: 1;
+	color: #A69F00;
+	border: #A69F00 solid 1px;
+}
+
+#about img {
+	width: 150px;
+	border: #9240D5 solid 3px;
+	padding: 5px;
+}
+
+
+.ptable {
+	background-color: rgba(255, 250, 115, .75);
+	color: #180773;
+	border: #9240D5 solid 3px;
+	padding: 5px;
+	margin: auto;
+	margin: 10px 0;
+}
+
+a[href$=".docx"] {
+	background: url('/assets/doc.png') no-repeat 0 2px;
+	padding-left: 25px;
+}
+
+form {
+	width: 75%;
+	min-width: 400px;
+}
+
+label {
+	color: #2E16B1;
+	font-weight: bold;
+	margin: 3px;
+	padding: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	width: 50%;
+	margin: 5px;
+	padding: 5px;
+	border: #2E16B1 solid 1px;
+	background-color: #FFFA73;
+	border-radius: 5px;
+}
+
+input[type="submit"] {
+	background-color: #FFFA40;
+	border: #2E16B1 solid 1px;
+	padding: 5px;
+	margin: 5px 0;
+	border-radius: 3px;
+}
+
+input:focus,
+textarea:focus,
+input[type="submit"]:hover {
+	background-color: #A69F00;
+}
+
+span,
+.valid {
+	color: #B1F100;
+	background-color: #739D00;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+.error {
+	color: #C10087;
+	background-color: #7D0017;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+/*Media query for medium screens*/
+
+@media screen and (max-width: 675px) {
+
+	h1 {
+		font-size: 2.125em;
+		text-align: right;
+	}
+
+	.heading {
+		max-height: 20%;
+	}
+
+	.heading img{
+		max-height: 25%;
+		border: #3F046F solid 3px;
+	}
+
+	.links li a{
+		font-size: .75em;
+		width: 20%;
+		margin-top: 4px;
+	}
+
+	.links {
+		height: 75px;
+	}
+
+	h2 {
+		font-size: 1.75em;
+	}
+
+	p {
+		text-align: justify;
+		padding: 5px;
+	}
+
+	td {
+		font-size: .75em;
+	}
+
+	#about img {
+		width: 30%;
+	}
+
+	form {
+	width: 50%;
+	min-width: 300px;
+}
+
+#video {
+	margin: 5% 5%;
+	border: #9240D5 solid 3px;
+	padding: 5px;
+	width: 400px; 
+	height: 275px;
+}
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	width: 100%;
+	margin: 0 4% 1% 0;
+	float: left;
+	display: block;
+}
+
+}
+
+/*Media query for small screens*/
+
+@media screen and (max-width: 380px) {
+
+	.links li a{
+		font-size: .75em;
+		margin: 2% 0 1% 0;
+		width: 100%;
+		position: relative;
+		right: 18%;
+	}
+
+	.links {
+		height: 200px;
+		margin: 5px 0;
+	}
+
+	.copyright {
+		font-size: .5em;
+	}
+
+	.ptable {
+		font-size: .70em;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	h2 {
+		font-size: 1.125em;
+	}
+
+	h3 {
+		font-size: 1em;
+	}
+
+	p {
+		text-align: justify;
+	}
+
+	#about img {
+		display: none;
+	}
+
+	.heading img{
+		max-height: 15%;
+		border: #3F046F solid 1px;
+	}
+
+	form {
+		width: 50%;
+		min-width: 300px;
+}
+
+}
+
+/* Print stylesheet, currently doesn't work :( */
+
+@media print {
+	* {
+		background: transparent;
+		color: #000;
+	}
+
+	.heading,
+	.links,
+	.copyright,
+	img {
+		display: none;
+	}
+
+	a[href^="http:"]::after {
+		content: " [" attr(href)"]";
+		color: blue;
+	}
+
+	@page {
+		margin: .5cm;
+	}
+
+	@page :first {
+		margin-top: 2cm;
+	}
+
+	h2, ul {
+		page-break-after: avoid;
+	}
+
+	p, ul {
+		orphans: 3;
+		widows: 3;
+		font-size: 11pt;
+	}
+
+}

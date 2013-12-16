@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rhiana Heath</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container">
+		<div class="heading" class="fittext">
+			<h1><strong>Rhiana Heath</strong></h1>
+			<object>
+			<%= link_to(image_tag("rhianaheath.jpg", :alt => "Rhiana Heath", :width => 50, :height => 50)) %>
+			</object>
+		</div>
+
+		<div class="links" class="fittext">
+			<ul>
+				<li><%= link_to "Index", 	index_path %>	</li>
+				<li><%= link_to "About", 	about_path %>	</li>
+				<li><%= link_to "Blog", 	blog_path %>	</li>
+				<li><%= link_to "Projects", projects_path %></li>
+				<li><%= link_to "Contact", 	contact_path %>	</li>
+			</ul>
+		</div>
+
+		<%= yield %>
+
+		<div class="copyright">
+	      <p>&copy; 2013 Rhiana Heath Freelancer. All Rights Reserved</p>
+    	</div>
+  	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+  	<script type="text/javascript" src="js/jquery.fittext.js"></script>
+
+	<script type="text/javascript">
+		$(".fittext").fitText(2);
+	</script>
+
+</body>
+</html>
